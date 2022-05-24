@@ -9,6 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Sacramento&display=swap" rel="stylesheet">
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
   </head>
   <body>
       <div class="top-container">
@@ -51,13 +60,35 @@
           <h3>Let me know if you have something interesting to say or share.</h3>
           <p>I would be glad to know you or help you in any creative design needs.</p>
           <br /><br /><br />
-          <a class="btn" href="mailto:name@email.com">Contact Me</a>
+
+        <!--<a class="btn" id="open-button" href="mailto:choiti19@gmail.com" onclick="openForm()">Contact Me</a>-->
+          <button class="btn" id="open-button" onclick="openForm()">Contact Me</button>
+          <div class="form-popup" id="myForm">
+            <form action="" class="form-container">
+             <h2>Contact Me</h2>
+
+              <label for="name"><b>Name</b></label>
+              <input type="text" placeholder="Enter Name" name="name" required><br>
+
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required><br>
+
+              <label for="message"><b>Message</b></label>
+              <input type="text" placeholder="Message" name="message" required><br>
+
+              <button type="submit" class="btn">Send</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+
+
+
         </div>
       </div>
 
       <div class="bottom-container">
         <a class="footer-link" href="https://www.linkedin.com/in/chaitalikarmakar/"><img class="a-linkedin-img" src="Images/linkedin.png" alt="linkedIn"  height="25px" width="25px"></a>
-        <a class="footer-link" href="https://twitter.com/"><img class="a-facebook-img" src="Images/facebook.jpg" alt="Facebook" height="25px" width="25px"></a>
+        <a class="footer-link" href="https://www.facebook.com/chaitali.karmakar.9"><img class="a-facebook-img" src="Images/facebook.jpg" alt="Facebook" height="25px" width="25px"></a>
         <a class="footer-link" href="https://chaitalikarmakar.github.io/CVwebsite/"><img class="a-website-img" src="Images/click.png" alt="website" height="25px" width="25px"></a>
         <p class="copyright">© 2022 Chaitali Karmakar</p>
       </div>
